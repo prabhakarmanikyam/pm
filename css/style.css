@@ -8147,12 +8147,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: #fefefe;
-  background: linear-gradient(160deg, #fefefe 0%, #edf2f7 100%);
+  background: #f8fafc;
+  background: linear-gradient(160deg, #f8fafc 0%, #e2e8f0 100%);
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #0f172a; }
+  color: #1f2937; }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8860,39 +8860,36 @@ h1, h2, h3, h4, h5,
   color: #1e293b;
   font-weight: 500; }
 
-.certifications-card {
-  width: 100%; }
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.25rem; }
-
-.skill-item {
+.skill-badges {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem; }
+
+.skill-badge {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem;
-  background: rgba(248, 250, 252, 0.9);
-  border-radius: 14px;
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  -webkit-box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-  text-align: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   color: #1e293b;
+  font-size: 0.85rem;
   font-weight: 600; }
 
-.skill-item img {
-  width: 42px;
-  height: 42px; }
+.skill-icon {
+  font-size: 1rem; }
+
+.certifications-card {
+  width: 100%; }
 
 .certification-badges {
   display: -webkit-box;
