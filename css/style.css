@@ -8147,11 +8147,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: #000000;
+  background: #fefefe;
+  background: linear-gradient(160deg, #fefefe 0%, #edf2f7 100%);
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #999999; }
+  color: #0f172a; }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8171,7 +8172,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
-  color: white;
+  color: #1e293b;
   font-weight: 400; }
 
 .text-primary {
@@ -8797,14 +8798,14 @@ h1, h2, h3, h4, h5,
       width: calc(100% - 130px); }
       .ftco-about ul.about-info li span:first-child {
         font-weight: 600;
-        color: #fff;
+        color: #1e293b;
         width: 130px; }
 
 .ftco-about .counter-wrap .text p {
   font-size: 20px; }
   .ftco-about .counter-wrap .text p span {
     font-weight: 400;
-    color: #fff; }
+    color: #1e293b; }
   .ftco-about .counter-wrap .text p span.number {
     font-weight: 600;
     color: #ffbd39; }
@@ -8812,12 +8813,15 @@ h1, h2, h3, h4, h5,
 .resume-wrap {
   width: 100%;
   margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #fff;
   padding: 30px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px; }
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.35); }
   .resume-wrap .date {
     font-weight: 900;
     font-size: 26px;
@@ -8825,10 +8829,87 @@ h1, h2, h3, h4, h5,
   .resume-wrap h2 {
     font-size: 26px; }
   .resume-wrap .position {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase; }
+
+.resume-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  width: 100%; }
+
+.resume-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e293b; }
+
+.resume-list {
+  padding-left: 1.2rem;
+  margin-bottom: 0; }
+  .resume-list li {
+    margin-bottom: 0.75rem;
+    color: rgba(15, 23, 42, 0.78); }
+
+.contact-card a {
+  color: #1e293b;
+  font-weight: 500; }
+
+.certifications-card {
+  width: 100%; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem; }
+
+.skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(248, 250, 252, 0.9);
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  -webkit-box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  text-align: center;
+  color: #1e293b;
+  font-weight: 600; }
+
+.skill-item img {
+  width: 42px;
+  height: 42px; }
+
+.certification-badges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.75rem; }
+
+.certification-badges span {
+  background: rgba(129, 140, 248, 0.12);
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem; }
 
 .services-1 {
   margin-bottom: 40px;
