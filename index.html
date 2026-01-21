@@ -161,21 +161,30 @@
   color: rgba(15, 23, 42, 0.75);
 }
 
+#highlights-section .impact-title {
+  color: var(--deep-navy);
+}
+
+#highlights-section .impact-subtitle {
+  color: rgba(30, 41, 59, 0.9);
+}
+
+
 .toolkit-panel {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.88));
+  background: linear-gradient(135deg, rgba(226, 232, 240, 0.92), rgba(191, 219, 254, 0.9));
   overflow: hidden;
   border-radius: 18px;
-  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.35);
-  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 25px 55px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(148, 163, 184, 0.35);
 }
 
 .toolkit-panel h3 {
   letter-spacing: 2px;
-  color: var(--aqua);
+  color: var(--ink);
 }
 
 .toolkit-panel p {
-  color: rgba(226, 232, 240, 0.85);
+  color: rgba(30, 41, 59, 0.82);
 }
 
 .toolkit-badges {
@@ -186,14 +195,21 @@
 }
 
 .toolkit-badges span {
-  background: rgba(56, 189, 248, 0.18);
-  color: #ffffff;
-  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--deep-navy);
+  border: 1px solid rgba(56, 189, 248, 0.4);
   border-radius: 999px;
   padding: 0.45rem 1.25rem;
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  box-shadow: 0 10px 22px rgba(148, 163, 184, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toolkit-badges span:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(148, 163, 184, 0.3);
 }
 
 .process-step {
@@ -260,16 +276,17 @@
 }
 
 .cta-panel .btn-primary {
-  background: #0f172a;
-  border-color: #0f172a;
-  color: #ffffff;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #0f172a;
+  font-weight: 600;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3);
 }
 
 .cta-panel .btn-primary:hover {
-  background: #ffffff;
-  color: #0f172a;
-  border-color: #ffffff;
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
 }
 
 @media (max-width: 991.98px) {
@@ -398,65 +415,6 @@
                 </div>
     </section>
 
-    <section class="ftco-section ftco-no-pt bg-light" id="highlights-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center ftco-animate">
-            <h1 class="big">Impact</h1>
-            <h2 class="mb-4">Data Impact at a Glance</h2>
-            <p>Focused on connecting data engineering, analytics, and storytelling to unlock measurable business value.</p>
-          </div>
-        </div>
-        <div class="row mb-4">
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
-              <div class="icon"><span class="icon-bar-chart"></span></div>
-              <h3>Predictive Forecasting</h3>
-              <p>Built neural network demand models on 500K+ shipments, boosting planning accuracy and cutting stockouts by 80%.</p>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
-              <div class="icon"><span class="icon-rocket"></span></div>
-              <h3>Operational Intelligence</h3>
-              <p>Streamlined analytics pipelines and agile delivery, enabling 30% faster stakeholder sign-off on decision workflows.</p>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
-              <div class="icon"><span class="icon-layers"></span></div>
-              <h3>Modern Analytics Stack</h3>
-              <p>Deliver insights with Python, SQL, Power BI, Tableau, Azure, and Snowflake to translate questions into action.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="p-5 text-white rounded position-relative toolkit-panel">
-              <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
-                <div class="pe-lg-5 mb-4 mb-lg-0">
-                  <h3 class="text-uppercase" style="letter-spacing:2px;">Analytics Toolbox</h3>
-                  <p class="mb-0">Platforms that support the complete analytics lifecycle—from data ingestion and modeling to visualization and automation.</p>
-                </div>
-                <div class="toolkit-badges">
-                  <span>Power BI</span>
-                  <span>Tableau</span>
-                  <span>Python</span>
-                  <span>SQL</span>
-                  <span>R</span>
-                  <span>Azure</span>
-                  <span>Snowflake</span>
-                  <span>Looker</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
 			<div class="row">
@@ -475,45 +433,13 @@
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Prabhaker Manikyam</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Business/Data Analyst</span></p>
-										<p><span class="title-s">Experience: </span> <span>4 Years</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Business Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>5+ Years</span></p>
 										<p><span class="title-s">Address: </span> <span>Raleigh, NC</span></p>
 									  </div>
 									</div>
 								  </div>
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -525,21 +451,96 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>As a recent graduate with a Master’s in Engineering Management specializing in analytics from NC State University, I bring a unique combination of data analytics expertise and software engineering experience. My background includes designing and implementing efficient software solutions, as well as interpreting complex datasets to deliver actionable insights that drive operational improvements.
+								<p>I’m Prabhaker Manikyam, a data analyst who turns complex signals into confident decisions. With 5+ years across healthcare, retail, logistics, and IT, I blend advanced SQL, Python, and R with a storyteller’s mindset to make analytics actionable for both technical and business audiences.
 
-									<br>I am seeking opportunities in a dynamic environment where I can leverage my technical skills in software development and data analytics to streamline processes, enhance decision-making, and contribute to innovative, data-driven solutions that support strategic goals.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<!--<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, HealthCare, Information Technology</span></li>-->
-									<li class="d-flex"><span>Education:</span> <span>Master’s in Engineering Management (focus: Analytics)</span></li>
-									<!-- <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li> -->
-									<li class="d-flex"><span>BI Tools:</span> <span>Power BI, SAS, Tableau, SAS JMP, MiniTab, Looker, CRM</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Python, R, SQL, PySpark, AWS, SSRS, Excel, DAX, Git, Snowflake</span></li>
-									<!--<li class="d-flex"><span>Interest:</span> <span>Traveling</span></li>-->
-									
-								</ul>
+									<br>From cloud data platforms to executive dashboards, I design end-to-end insights that elevate strategy, accelerate operations, and inspire teams to move with clarity. My focus is simple: build analytics that earns trust, drives measurable impact, and sparks the next smart move.</p>
+									<ul class="about-info mt-4 px-md-0 px-2">
+										<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+										<!--<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, HealthCare, Information Technology</span></li>-->
+										<li class="d-flex"><span>Education:</span> <span>Master of Engineering Management (Data Science &amp; Analytics)</span></li>
+										<!-- <li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li> -->
+										<!--<li class="d-flex"><span>Interest:</span> <span>Traveling</span></li>-->
+										
+									</ul>
+									<div class="about-skills mt-4">
+										<h3 class="resume-card-title">Skills &amp; Tools</h3>
+										<div class="skills-grid">
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python logo">
+												<span>Python</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/r.svg" alt="R logo">
+												<span>R</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftsqlserver.svg" alt="SQL Server logo">
+												<span>SQL Server</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mysql.svg" alt="MySQL logo">
+												<span>MySQL</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/postgresql.svg" alt="PostgreSQL logo">
+												<span>PostgreSQL</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powerbi.svg" alt="Power BI logo">
+												<span>Power BI</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tableau.svg" alt="Tableau logo">
+												<span>Tableau</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftexcel.svg" alt="Excel logo">
+												<span>Excel</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonaws.svg" alt="AWS logo">
+												<span>AWS</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftazure.svg" alt="Azure logo">
+												<span>Azure</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/snowflake.svg" alt="Snowflake logo">
+												<span>Snowflake</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonredshift.svg" alt="Amazon Redshift logo">
+												<span>Redshift</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/alteryx.svg" alt="Alteryx logo">
+												<span>Alteryx</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftpowerpoint.svg" alt="PowerPoint logo">
+												<span>PowerPoint</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftword.svg" alt="MS Word logo">
+												<span>MS Word</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftaccess.svg" alt="MS Access logo">
+												<span>MS Access</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visualstudio.svg" alt="SSIS logo">
+												<span>SSIS</span>
+											</div>
+											<div class="skill-item">
+												<img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftsharepoint.svg" alt="SharePoint logo">
+												<span>SharePoint</span>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
 
 
 						<div class="counter-wrap ftco-animate d-flex mt-md-3">
@@ -557,6 +558,53 @@
 		</div>
     </section>
 
+    <section class="ftco-section ftco-no-pt bg-light" id="highlights-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-8 text-center ftco-animate">
+            <h1 class="big impact-title">Impact</h1>
+            <h2 class="mb-4 impact-subtitle">Outcomes that Move the Needle</h2>
+            <p>Turning data strategy into measurable wins—faster decisions, stronger operations, and clearer executive alignment.</p>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="highlight-card">
+              <div class="icon"><span class="icon-bar-chart"></span></div>
+              <h3>Forecasting with Confidence</h3>
+              <p>Designed predictive models on 500K+ shipments to sharpen planning accuracy, cut stockouts by 80%, and drive smarter inventory bets.</p>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="highlight-card">
+              <div class="icon"><span class="icon-rocket"></span></div>
+              <h3>Operational Clarity</h3>
+              <p>Streamlined analytics delivery and stakeholder alignment, accelerating sign-offs by 30% and unlocking faster execution.</p>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="highlight-card">
+              <div class="icon"><span class="icon-layers"></span></div>
+              <h3>Insight-to-Action Stack</h3>
+              <p>Blend Python, SQL, Power BI, Tableau, Azure, and Snowflake to translate complex questions into decisions teams can act on.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="p-5 text-white rounded position-relative toolkit-panel">
+              <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
+                <div class="pe-lg-5 mb-4 mb-lg-0">
+                  <h3 class="text-uppercase" style="letter-spacing:2px;">Analytics Focus</h3>
+                  <p class="mb-0">Building end-to-end data solutions that connect ingestion, modeling, and decision-making in a measurable way.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
 
 	
@@ -566,9 +614,49 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>Data-driven Business Analyst with over 4 years of experience leveraging data analytics, process optimization, and project management to drive impactful business strategies. Skilled in statistical analysis, machine learning, and delivering actionable insights to enhance operational efficiency and decision-making.</p>
+            <p>Data Analyst with 5+ years of experience delivering analytics, automation, and BI solutions that turn complex data into strategic decisions.</p>
           </div>
         </div>
+
+			<div class="row mb-5">
+				<div class="col-lg-12 d-flex ftco-animate">
+					<div class="resume-card">
+						<h3 class="resume-card-title">Professional Summary</h3>
+						<ul class="resume-list">
+							<li>Data Analyst with 5+ years of experience supporting data-driven decisions across healthcare, retail, logistics, supply chain, and IT sectors.</li>
+						<li>Proficient in SQL (including SQL Server, MySQL, PostgreSQL) for querying, data extraction, and optimization.</li>
+						<li>Skilled in Python and R for data analysis, automation, and reporting, using Pandas, NumPy, Matplotlib, and Seaborn for exploratory analytics.</li>
+						<li>Applied statistical techniques and trend analysis to support forecasting, anomaly detection, and operational insights.</li>
+						<li>Built interactive dashboards and reports using Tableau, Power BI, Excel, and Power Query for decision-making.</li>
+						<li>Developed ETL workflows using SSIS and created automated reporting with SSRS to reduce manual processes.</li>
+						<li>Experienced with cloud data warehouses including Snowflake and Amazon Redshift for scalable analytics.</li>
+						<li>Advanced Excel and MS Office proficiency for data manipulation, PivotTables, and lookup functions (VLOOKUP/XLOOKUP).</li>
+						<li>Adept at translating complex datasets into actionable insights for technical and non-technical stakeholders.</li>
+							<li>Proven ability to streamline reporting, improve data accessibility, and enable data-informed decision-making.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		<div class="row mb-5">
+			<div class="col-12">
+				<h1 class="big-4">Certifications</h1>
+				<div class="underline"></div>
+			</div>
+			<div class="col-12 d-flex ftco-animate">
+				<div class="resume-card certifications-card">
+					<div class="certification-badges">
+						<span>Microsoft Certified: Power BI Data Analyst Associate</span>
+						<span>Data Analytics Essentials, Cisco</span>
+						<span>Six Sigma Green Belt</span>
+						<span>AWS Data Engineer, Associate</span>
+						<span>Tableau Desktop Specialist</span>
+						<span>Certified Scrum Product Owner, Scrum Alliance</span>
+						<span>Certified Associate in Project Management, PMI</span>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="row">
 			<h1 class="big-4">Experience</h1>
@@ -579,18 +667,14 @@
 		<div class="row">
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
-						<span class="date">January 2024-May 2024</span>
-						<h2>Business Analyst Student</h2>
-						<span class="position">VOLVO</span>
+						<span class="date">Jul 2025 - Present</span>
+						<h2>Business Analyst</h2>
+						<span class="position">Cloud Pharmaceuticals</span>
 						<p class="mt-4">
 							<ul>
-								<li>Defined and documented forecasting requirements across logistics and data teams, aligning cross-functional planning and improving demand visibility.</li>
-
-<li>Built a Python-based neural network on 500K+ records to forecast shipment volume and cost with high accuracy, enhancing supply chain predictability.</li>
-
-<li>Increased data reliability by 30% through advanced data cleaning and validation techniques using Excel and R.</li>
-
-<li>Designed interactive Power BI dashboards for KPIs and predictive analytics, reducing stockouts by 80% and strengthening decision-making.</li>
+								<li>Gathered system and financial requirements, evaluated 5+ GPU vendors, and built cost-benefit models to support executive investment decisions.</li>
+								<li>Modeled capacity plans for AI workloads across compute, storage, and networking, translating needs into scalable deployment scenarios.</li>
+								<li>Delivered executive dashboards on utilization, power, and cooling trade-offs, reducing projected costs by 15% and accelerating approvals.</li>
 							</ul>
 						</p>
 					</div>
@@ -599,24 +683,54 @@
 
 				<div class="col-md-6">
 					<div class="resume-wrap ftco-animate">
-						<span class="date">May 2019-December 2022</span>
-						<h2>Business Intelligence Analyst</h2>
+						<span class="date">Jan 2024 - May 2024</span>
+						<h2>Data Analyst</h2>
+						<span class="position">Volvo Group</span>
+						<p class="mt-4">
+							<ul>
+								<li>Partnered with supply chain stakeholders to define reporting needs, translate questions into analytics specifications, and deliver dashboards that improved operational decision-making.</li>
+								<li>Built and deployed Power BI dashboards integrating predictive outputs and operational KPIs, improving visibility and reducing stockouts by 80% through earlier identification of planning gaps.</li>
+								<li>Applied role-based dashboard access patterns, including RLS-aligned requirements, to ensure stakeholders viewed only relevant data slices for their business scope.</li>
+								<li>Analyzed 500K+ shipment records using SQL and Python to produce trend insights, anomaly indicators, and planning recommendations for logistics operations.</li>
+								<li>Improved KPI reliability by 30% through transformation logic, validation checks, and structured dataset preparation using SQL, Excel, and R, supporting accurate recurring reporting.</li>
+								<li>Applied statistical techniques including trend and variance analysis, correlation checks, and forecasting error evaluation to explain key drivers behind operational performance changes.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May 2023 - Dec 2024</span>
+						<h2>Facilities Admin</h2>
+						<span class="position">NC State University</span>
+						<p class="mt-4">
+							<ul>
+								<li>Managed operational workflows requiring high attention to detail, coordinating vendors and service requests and resolving 95%+ work orders on time.</li>
+								<li>Implemented digital tracking and reporting routines, reducing response time by 30% and improving operational communication across stakeholders.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May 2019 - Dec 2022</span>
+						<h2>Data Analyst</h2>
 						<span class="position">Accenture</span>
 						<p class="mt-4">
 							<ul>
-<li>Delivered 20+ interactive Power BI dashboards for KPI tracking and advanced data visualization, improved reporting by 40%.</li>
-<li>Developed and maintained ETL pipelines to extract, transform, and load data from SQL databases and APIs, ensuring timely and reliable reporting updates.</li>
-<li>Led UAT across global business units by preparing test cases, coordinating feedback, and validating end-to-end data flows prior to rollout.</li>
-<li>Created and managed Agile artifacts in Jira and Confluence, improving sprint clarity and reducing delivery delays.</li>
-<li>Led requirement-gathering sessions and stakeholder interviews to document technical and business requirements, reducing project rework by 30%.</li>
-<li>Contributed to a web application development project that saved $2.3M annually by optimizing test management and streamlining processes.</li>
-<li>Captured analytics requirements from finance and operations teams, translating business needs into structured use cases and data models.</li>
-<li>Built Excel-based data validation prototypes and visualization tools, reducing approval cycles by 30% and improving stakeholder alignment.</li>
-<li>Executed data migration by mapping legacy systems to BI platforms, ensuring consistency, accuracy, and integrity of reporting datasets.</li>
-<li>Presented data-driven insights and visual reports to non-technical stakeholders, improving data adoption and decision-making across business units.</li>
-
-
-
+								<li>Translated business requirements into BI deliverables by producing technical specifications, defining KPIs, and aligning dashboard scope, timelines, and acceptance criteria across finance and operations stakeholders.</li>
+								<li>Delivered 20 Power BI dashboards with DAX measures, KPI definitions, drill-down analysis, and automated refresh workflows, improving reporting turnaround by 40% and increasing leadership visibility.</li>
+								<li>Built and maintained 15 ETL workflows using SQL, SSIS, and Power Query to integrate data from SQL Server, APIs, and Excel, reducing manual effort by 50% and improving data reliability.</li>
+								<li>Performed data transformation and reshaping to support reporting models, including reporting-ready datasets and star schema-aligned structures where appropriate for performance and usability.</li>
+								<li>Identified, communicated, and resolved data quality and reconciliation issues by implementing validation checks and refresh monitoring, reducing post-release reporting issues and improving stakeholder trust.</li>
+								<li>Optimized 100+ SQL queries across 10M+ rows using CTEs, joins, and window functions to accelerate ad hoc analysis and modeling workloads.</li>
+								<li>Created Excel-based KPI prototypes using PivotTables and lookup functions to accelerate stakeholder alignment, shortening approval cycles by 30% and speeding dashboard delivery.</li>
+								<li>Supported end-to-end project lifecycle activities including UAT planning, defect triage, documentation, and stakeholder updates across 8 global business units, reducing post-deployment defects by 35%.</li>
+								<li>Contributed to reporting standards by documenting KPI logic and maintaining version control practices for BI assets to ensure consistency across releases.</li>
 							</ul>
 						</p>
 					</div>
@@ -636,19 +750,17 @@
 			<div class="row">
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">2023-2024</span>
-    					<h2>Masters in Engineering Management (focus: Analytics)</h2>
-    					<span class="position">North Carolina State University</span>
-    					<p class="mt-4">GPA: 3.8</p>
+    					<span class="date">Jan 2023 - Dec 2024</span>
+    					<h2>Master of Engineering Management (Data Science &amp; Analytics)</h2>
+    					<span class="position">North Carolina State University, Raleigh, NC</span>
     				</div>
     			</div>
 
     			<div class="col-md-6">
     				<div class="resume-wrap ftco-animate">
-    					<span class="date">2015-2019</span>
-    					<h2>Bachelor of Technology, Information Technology</h2>
-    					<span class="position">Jawaharlal Nehru Technological University</span>
-    					<p class="mt-4">Grade: 3.5</p>
+    					<span class="date">Bachelor of Science</span>
+    					<h2>Information Technology</h2>
+    					<span class="position">Sreenidhi University, Hyderabad, India</span>
     				</div>
 				</div>
     		</div>
@@ -839,7 +951,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+ 1 984 528 9870</a></p>
+	            <p><a href="tel:+19845289870">+1 984 528 9870</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -848,7 +960,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">prabhakarmanikyam24@gmail.com</a></p>
+	            <p><a href="mailto:prabhakerm.data@gmail.com">prabhakerm.data@gmail.com</a></p>
 	          </div>
           </div>
           <!-- <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -893,7 +1005,7 @@
               <p>Together we can shape resilient strategies, launch smarter products, and deliver measurable wins with analytics you can trust.</p>
             </div>
             <div class="col-lg-4 text-lg-right">
-              <a href="mailto:prabhakarmanikyam24@gmail.com" class="btn btn-primary py-3 px-4">Book a Data Strategy Call</a>
+              <a href="mailto:prabhakerm.data@gmail.com" class="btn btn-primary py-3 px-4">Let’s Collaborate</a>
             </div>
           </div>
         </div>
