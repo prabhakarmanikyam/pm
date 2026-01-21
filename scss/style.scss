@@ -8,9 +8,9 @@ $black: #000000;
 $darken: #232931;
 $deep-navy: #0f172a;
 $slate-ink: #1e293b;
-$page-bg: #f8fafc;
-$page-bg-secondary: #e2e8f0;
-$body-text: #1f2937;
+$page-bg: #0b1120;
+$page-bg-secondary: #111827;
+$body-text: rgba(226, 232, 240, 0.92);
 
 $primary: #ffbd39;
 $secondary: #a0f669;
@@ -62,7 +62,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
 	line-height: 1.5;
-	color: $slate-ink;
+	color: $white;
 	font-weight: 400;
 }
 
@@ -843,7 +843,7 @@ h1, h2, h3, h4, h5,
 				width: calc(100% - 130px);
 				&:first-child{
 					font-weight: 600;
-					color: $slate-ink;
+					color: $mist;
 					width: 130px;
 				}
 			}
@@ -855,7 +855,7 @@ h1, h2, h3, h4, h5,
 				font-size: 20px;
 				span{
 					font-weight: 400;
-					color: $slate-ink;
+					color: $mist;
 				}
 				span.number{
 					font-weight: 600;
@@ -907,6 +907,10 @@ h1, h2, h3, h4, h5,
 	color: $slate-ink;
 }
 
+.about-skills .resume-card-title{
+	color: $white;
+}
+
 .resume-list{
 	padding-left: 1.2rem;
 	margin-bottom: 0;
@@ -937,12 +941,12 @@ h1, h2, h3, h4, h5,
 	align-items: center;
 	gap: 0.75rem;
 	padding: 1rem;
-	background: rgba(248, 250, 252, 0.9);
+	background: rgba(15, 23, 42, 0.85);
 	border-radius: 14px;
-	border: 1px solid rgba(148, 163, 184, 0.25);
-	box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+	border: 1px solid rgba(148, 163, 184, 0.2);
+	box-shadow: 0 12px 28px rgba(15, 23, 42, 0.4);
 	text-align: center;
-	color: $slate-ink;
+	color: $mist;
 	font-weight: 600;
 }
 
