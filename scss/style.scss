@@ -6,6 +6,11 @@ $font-primary: 'Poppins',Arial, sans-serif;
 $white: #fff;
 $black: #000000;
 $darken: #232931;
+$deep-navy: #0f172a;
+$slate-ink: #1e293b;
+$page-bg: #0b1120;
+$page-bg-secondary: #111827;
+$body-text: rgba(226, 232, 240, 0.92);
 
 $primary: #ffbd39;
 $secondary: #a0f669;
@@ -31,12 +36,13 @@ html {
 	// overflow-x: hidden;
 }
 body {
-	font-family: $font-primary;
-	background: $black;
-	font-size: 16px;
-	line-height: 1.8;
-	font-weight: 400;
-	color: lighten($black,60%);
+        font-family: $font-primary;
+        background: $page-bg;
+        background: linear-gradient(160deg, $page-bg 0%, $page-bg-secondary 100%);
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: $body-text;
 	&.menu-show {
 		overflow: hidden;
 		position: fixed;
@@ -56,7 +62,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
 	line-height: 1.5;
-	color: rgba(255,255,255,1);
+	color: $white;
 	font-weight: 400;
 }
 
@@ -837,7 +843,7 @@ h1, h2, h3, h4, h5,
 				width: calc(100% - 130px);
 				&:first-child{
 					font-weight: 600;
-					color: $white;
+					color: $mist;
 					width: 130px;
 				}
 			}
@@ -849,7 +855,7 @@ h1, h2, h3, h4, h5,
 				font-size: 20px;
 				span{
 					font-weight: 400;
-					color: $white;
+					color: $mist;
 				}
 				span.number{
 					font-weight: 600;
@@ -864,9 +870,11 @@ h1, h2, h3, h4, h5,
 .resume-wrap{
 	width: 100%;
 	margin-bottom: 30px;
-	background: rgba(255,255,255,.1);
+	background: $white;
 	padding: 30px;
-	@include border-radius(5px);
+	@include border-radius(12px);
+	box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+	border: 1px solid rgba(148, 163, 184, 0.35);
 	.date{
 		font-weight: 900;
 		font-size: 26px;
@@ -881,6 +889,86 @@ h1, h2, h3, h4, h5,
 		letter-spacing: 3px;
 		text-transform: uppercase;
 	}
+}
+
+.resume-card{
+	background: $white;
+	padding: 28px;
+	border-radius: 16px;
+	box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+	border: 1px solid rgba(148, 163, 184, 0.3);
+	width: 100%;
+}
+
+.resume-card-title{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: $slate-ink;
+}
+
+.about-skills .resume-card-title{
+	color: $white;
+}
+
+.resume-list{
+	padding-left: 1.2rem;
+	margin-bottom: 0;
+	li{
+		margin-bottom: 0.75rem;
+		color: rgba(15, 23, 42, 0.78);
+	}
+}
+
+.contact-card a{
+	color: $slate-ink;
+	font-weight: 500;
+}
+
+.certifications-card{
+	width: 100%;
+}
+
+.skills-grid{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 1.25rem;
+}
+
+.skill-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 1rem;
+	background: rgba(15, 23, 42, 0.85);
+	border-radius: 14px;
+	border: 1px solid rgba(148, 163, 184, 0.2);
+	box-shadow: 0 12px 28px rgba(15, 23, 42, 0.4);
+	text-align: center;
+	color: $mist;
+	font-weight: 600;
+}
+
+.skill-item img{
+	width: 42px;
+	height: 42px;
+}
+
+.certification-badges{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+.certification-badges span{
+	background: rgba(129, 140, 248, 0.12);
+	border: 1px solid rgba(129, 140, 248, 0.25);
+	padding: 0.5rem 1rem;
+	border-radius: 999px;
+	font-weight: 600;
+	color: $slate-ink;
+	font-size: 0.9rem;
 }
 
 //SERVICES
