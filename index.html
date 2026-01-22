@@ -289,6 +289,513 @@
   border-color: #0f172a;
 }
 
+.section-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-animated::before {
+  content: "";
+  position: absolute;
+  inset: -40% 0 auto;
+  height: 120%;
+  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(129, 140, 248, 0.2), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(34, 211, 238, 0.18), transparent 45%);
+  opacity: 0.6;
+  animation: section-glow 18s ease-in-out infinite;
+  z-index: 0;
+}
+
+.section-animated > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.35;
+  pointer-events: none;
+  animation: grid-shift 20s linear infinite;
+}
+
+.hero-ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-ambient span {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  opacity: 0.4;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.7) 0%, rgba(15, 23, 42, 0) 70%);
+  animation: float-orb 16s ease-in-out infinite;
+}
+
+.hero-ambient span:nth-child(2) {
+  width: 280px;
+  height: 280px;
+  left: 60%;
+  top: 10%;
+  opacity: 0.35;
+  animation-duration: 20s;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.75) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.hero-ambient span:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  left: 20%;
+  top: 65%;
+  opacity: 0.3;
+  animation-duration: 18s;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.65) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animated::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: button-shimmer 3.5s ease-in-out infinite;
+}
+
+.float-card {
+  animation: float-card 8s ease-in-out infinite;
+}
+
+.float-card.delay-1 {
+  animation-delay: 0.8s;
+}
+
+.float-card.delay-2 {
+  animation-delay: 1.6s;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--sky), var(--violet), var(--aqua));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+.analytics-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.analytics-strip span {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: chip-pulse 3s ease-in-out infinite;
+}
+
+.analytics-strip span:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.analytics-strip span:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.data-sparkline {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.data-sparkline path {
+  stroke: var(--aqua);
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: draw-line 4s ease-in-out infinite;
+}
+
+.data-sparkline circle {
+  fill: var(--sky);
+  animation: node-pulse 2.5s ease-in-out infinite;
+}
+
+.data-sparkline circle:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.data-sparkline circle:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+.data-sparkline circle:nth-of-type(4) {
+  animation-delay: 1.2s;
+}
+
+.data-sparkline circle:nth-of-type(5) {
+  animation-delay: 1.6s;
+}
+
+.experience-list li {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.experience-list.is-visible li {
+  animation: list-reveal 0.8s ease forwards;
+}
+
+.experience-list.is-visible li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.experience-list.is-visible li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.experience-list.is-visible li:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.experience-list.is-visible li:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.experience-list.is-visible li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.experience-list.is-visible li:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.experience-list.is-visible li:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.experience-list.is-visible li:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card.is-visible {
+  animation: card-reveal 0.9s ease forwards, card-float 6s ease-in-out 0.9s infinite;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: conic-gradient(from 180deg, rgba(56, 189, 248, 0.7), rgba(129, 140, 248, 0.6), rgba(34, 211, 238, 0.6), rgba(56, 189, 248, 0.7));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.lively-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lively-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(from 90deg, rgba(56, 189, 248, 0.35), rgba(129, 140, 248, 0.3), rgba(34, 211, 238, 0.3), rgba(56, 189, 248, 0.35));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: border-spin 8s linear infinite;
+}
+
+.lively-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.92);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lively-card:hover::before,
+.lively-card:hover::after {
+  opacity: 1;
+}
+
+.lively-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.lively-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.35);
+  color: #ffffff;
+}
+
+.lively-card:hover h1,
+.lively-card:hover h2,
+.lively-card:hover h3,
+.lively-card:hover h4,
+.lively-card:hover p,
+.lively-card:hover li,
+.lively-card:hover span {
+  color: #ffffff;
+}
+
+.lively-card:hover .resume-list li,
+.lively-card:hover .certification-badges span {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.lively-card:hover .certification-badges span {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.lively-card:hover a {
+  color: #ffffff;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-item:hover::after {
+  opacity: 1;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.project-meta span {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: var(--deep-navy);
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(40px, -40px, 0);
+  }
+}
+
+@keyframes button-shimmer {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(220%);
+    opacity: 0;
+  }
+}
+
+@keyframes float-card {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes grid-shift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 160px 160px, 160px 160px;
+  }
+}
+
+@keyframes chip-pulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+  50% {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.3);
+  }
+}
+
+@keyframes draw-line {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes list-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes card-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes section-glow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
 @media (max-width: 991.98px) {
   .cta-panel {
     text-align: center;
@@ -350,7 +857,12 @@
               </div>
             </div>
           </nav>
-	  <section id="home-section" class="hero">
+	  <section id="home-section" class="hero hero-animated data-grid">
+		  <div class="hero-ambient">
+			  <span style="left: -40px; top: 10%;"></span>
+			  <span></span>
+			  <span></span>
+		  </div>
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
 	      	<div class="overlay"></div>
@@ -359,10 +871,10 @@
 	          	<div class="one-third  order-md-last img" style="background-image:url(images/IMG_0188.JPG); height:80%">
 	          	 <div class="overlay"></div>
 	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          <div class="one-forth d-flex  align-items-center ftco-animate hero-content" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Prabhakar M</span></h1>
+			            <h1 class="mb-4 mt-3">I'm <span class="gradient-text">Prabhakar M</span></h1>
 
 						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
@@ -403,10 +915,25 @@
 						<br>
 						<br>
                                     <h2>Data &amp; Business Analyst</h2>
+									<div class="analytics-strip reveal-on-scroll">
+										<span>Forecast Models</span>
+										<span>Pipeline KPIs</span>
+										<span>Executive Dashboards</span>
+									</div>
+									<svg class="data-sparkline reveal-on-scroll" viewBox="0 0 300 80" aria-hidden="true">
+										<path d="M10 60 L60 40 L110 50 L160 20 L210 35 L260 15 L290 30"></path>
+										<circle cx="10" cy="60" r="4"></circle>
+										<circle cx="60" cy="40" r="4"></circle>
+										<circle cx="110" cy="50" r="4"></circle>
+										<circle cx="160" cy="20" r="4"></circle>
+										<circle cx="210" cy="35" r="4"></circle>
+										<circle cx="260" cy="15" r="4"></circle>
+										<circle cx="290" cy="30" r="4"></circle>
+									</svg>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <p>
-                                                 <a href="https://github.com/prabhakarmanikyam?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4">Explore Portfolio</a></p>
+                                                 <a href="https://github.com/prabhakarmanikyam?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4 btn-animated">Explore Portfolio</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -415,12 +942,12 @@
                 </div>
     </section>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <section class="ftco-about img ftco-section ftco-no-pb section-animated" id="about-section">
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
 				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
+					<div class="col-md-6 col-lg-5 d-flex reveal-on-scroll">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
 								<div class="row">
@@ -443,7 +970,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="col-md-6 col-lg-7 pl-lg-5 pb-5 reveal-on-scroll">
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
 								
@@ -557,7 +1084,7 @@
 		</div>
     </section>
 
-    <section class="ftco-section ftco-no-pt bg-light" id="highlights-section">
+    <section class="ftco-section ftco-no-pt bg-light section-animated" id="highlights-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center ftco-animate">
@@ -566,23 +1093,23 @@
             <p>Turning data strategy into measurable wins—faster decisions, stronger operations, and clearer executive alignment.</p>
           </div>
         </div>
-        <div class="row mb-4">
+        <div class="row mb-4 reveal-on-scroll">
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
+            <div class="highlight-card float-card reveal-on-scroll">
               <div class="icon"><span class="icon-bar-chart"></span></div>
               <h3>Forecasting with Confidence</h3>
               <p>Designed predictive models on 500K+ shipments to sharpen planning accuracy, cut stockouts by 80%, and drive smarter inventory bets.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
+            <div class="highlight-card float-card delay-1 reveal-on-scroll">
               <div class="icon"><span class="icon-rocket"></span></div>
               <h3>Operational Clarity</h3>
               <p>Streamlined analytics delivery and stakeholder alignment, accelerating sign-offs by 30% and unlocking faster execution.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
+            <div class="highlight-card float-card delay-2 reveal-on-scroll">
               <div class="icon"><span class="icon-layers"></span></div>
               <h3>Insight-to-Action Stack</h3>
               <p>Blend Python, SQL, Power BI, Tableau, Azure, and Snowflake to translate complex questions into decisions teams can act on.</p>
@@ -591,7 +1118,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div class="p-5 text-white rounded position-relative toolkit-panel">
+            <div class="p-5 text-white rounded position-relative toolkit-panel reveal-on-scroll">
               <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
                 <div class="pe-lg-5 mb-4 mb-lg-0">
                   <h3 class="text-uppercase" style="letter-spacing:2px;">Analytics Focus</h3>
@@ -607,7 +1134,7 @@
 
 
 	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+    <section class="ftco-section ftco-no-pb section-animated" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
@@ -619,7 +1146,7 @@
 
 			<div class="row mb-5">
 				<div class="col-lg-12 d-flex ftco-animate">
-					<div class="resume-card">
+					<div class="resume-card reveal-on-scroll lively-card">
 						<h3 class="resume-card-title">Professional Summary</h3>
 						<ul class="resume-list">
 							<li>Data Analyst with 5+ years of experience supporting data-driven decisions across healthcare, retail, logistics, supply chain, and IT sectors.</li>
@@ -643,7 +1170,7 @@
 				<div class="underline"></div>
 			</div>
 			<div class="col-12 d-flex ftco-animate">
-				<div class="resume-card certifications-card">
+				<div class="resume-card certifications-card reveal-on-scroll lively-card">
 					<div class="certification-badges">
 						<span>Microsoft Certified: Power BI Data Analyst Associate</span>
 						<span>Data Analytics Essentials, Cisco</span>
@@ -665,12 +1192,12 @@
 		
 		<div class="row">
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">Jul 2025 - Present</span>
 						<h2>Business Analyst</h2>
 						<span class="position">Cloud Pharmaceuticals</span>
 						<p class="mt-4">
-							<ul>
+							<ul class="experience-list reveal-on-scroll">
 								<li>Gathered system and financial requirements, evaluated 5+ GPU vendors, and built cost-benefit models to support executive investment decisions.</li>
 								<li>Modeled capacity plans for AI workloads across compute, storage, and networking, translating needs into scalable deployment scenarios.</li>
 								<li>Delivered executive dashboards on utilization, power, and cooling trade-offs, reducing projected costs by 15% and accelerating approvals.</li>
@@ -681,12 +1208,12 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">Jan 2024 - May 2024</span>
 						<h2>Data Analyst</h2>
 						<span class="position">Volvo Group</span>
 						<p class="mt-4">
-							<ul>
+							<ul class="experience-list reveal-on-scroll">
 								<li>Partnered with supply chain stakeholders to define reporting needs, translate questions into analytics specifications, and deliver dashboards that improved operational decision-making.</li>
 								<li>Built and deployed Power BI dashboards integrating predictive outputs and operational KPIs, improving visibility and reducing stockouts by 80% through earlier identification of planning gaps.</li>
 								<li>Applied role-based dashboard access patterns, including RLS-aligned requirements, to ensure stakeholders viewed only relevant data slices for their business scope.</li>
@@ -700,12 +1227,12 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">May 2023 - Dec 2024</span>
 						<h2>Facilities Admin</h2>
 						<span class="position">NC State University</span>
 						<p class="mt-4">
-							<ul>
+							<ul class="experience-list reveal-on-scroll">
 								<li>Managed operational workflows requiring high attention to detail, coordinating vendors and service requests and resolving 95%+ work orders on time.</li>
 								<li>Implemented digital tracking and reporting routines, reducing response time by 30% and improving operational communication across stakeholders.</li>
 							</ul>
@@ -715,12 +1242,12 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">May 2019 - Dec 2022</span>
 						<h2>Data Analyst</h2>
 						<span class="position">Accenture</span>
 						<p class="mt-4">
-							<ul>
+							<ul class="experience-list reveal-on-scroll">
 								<li>Translated business requirements into BI deliverables by producing technical specifications, defining KPIs, and aligning dashboard scope, timelines, and acceptance criteria across finance and operations stakeholders.</li>
 								<li>Delivered 20 Power BI dashboards with DAX measures, KPI definitions, drill-down analysis, and automated refresh workflows, improving reporting turnaround by 40% and increasing leadership visibility.</li>
 								<li>Built and maintained 15 ETL workflows using SQL, SSIS, and Power Query to integrate data from SQL Server, APIs, and Excel, reducing manual effort by 50% and improving data reliability.</li>
@@ -748,7 +1275,7 @@
 		
 			<div class="row">
     			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate lively-card">
     					<span class="date">Jan 2023 - Dec 2024</span>
     					<h2>Master of Engineering Management (Data Science &amp; Analytics)</h2>
     					<span class="position">North Carolina State University, Raleigh, NC</span>
@@ -756,7 +1283,7 @@
     			</div>
 
     			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+	    			<div class="resume-wrap ftco-animate lively-card">
     					<span class="date">Bachelor of Science</span>
     					<h2>Information Technology</h2>
     					<span class="position">Sreenidhi University, Hyderabad, India</span>
@@ -770,7 +1297,7 @@
 
    
 
-    <section class="ftco-section" id="project-section">
+    <section class="ftco-section section-animated" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -781,35 +1308,50 @@
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
+          	<div class="blog-entry justify-content-end reveal-on-scroll project-card">
               <a href="https://github.com/prabhakarmanikyam/amazonemployeeclassification" class="block-20 zoom-effect" style="background-image: url('images/employee-access.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
 
                 <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/amazonemployeeclassification">Optimizing Employee Access Approval Using Machine Learning</a></h3>
                 <p>Designed a machine learning model to predict access approvals/denials using Random Forest, achieving 95% test accuracy and reducing false positive rates to 12%.</p>
+				<div class="project-meta">
+					<span>Random Forest</span>
+					<span>95% Accuracy</span>
+					<span>Classification</span>
+				</div>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
+          	<div class="blog-entry justify-content-end reveal-on-scroll project-card">
               <a href="https://github.com/prabhakarmanikyam/Data-Analysis/blob/main/Data%20Analysis%20%20Project%20Report-draft.pdf" class="block-20 zoom-effect" style="background-image: url('images/target.avif');">
               </a>
               <div class="text mt-3 float-right d-block">
 
                 <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Data-Analysis/blob/main/Data%20Analysis%20%20Project%20Report-draft.pdf">Target Store Sales Data Analysis</a></h3>
                 <p>Developed an MS Access database with interactive dashboards and visual analytics to track sales records, identify trends across product categories, and analyze total sales for enhanced managerial decision-making. </p>
+				<div class="project-meta">
+					<span>MS Access</span>
+					<span>Sales Trends</span>
+					<span>Dashboards</span>
+				</div>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
+          	<div class="blog-entry reveal-on-scroll project-card">
               <a href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction" class="block-20 zoom-effect" style="background-image: url('images/heart-disease.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
 
                 <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction">Early Detection of Heart Disease</a></h3>
                 <p>Developed and optimized an XGBoost classifier, achieving 88.33% accuracy in heart disease prediction by applying advanced hyperparameter tuning and feature selection techniques to enhance model performance and generalization.</p>
+				<div class="project-meta">
+					<span>XGBoost</span>
+					<span>88.33% Accuracy</span>
+					<span>Feature Selection</span>
+				</div>
               </div>
             </div>
           </div>
@@ -818,17 +1360,22 @@
 		<br>
 		<!-- added justify-content-center to center align the last two projects -->
 		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end reveal-on-scroll project-card">
 				<a href="https://github.com/prabhakarmanikyam/Delivery-Optimization" class="block-20 zoom-effect" style="background-image: url('images/geo.png');">
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Delivery-Optimization">Optimizing Cloud Kitchen Assignments Using Geospatial Analysis and Linear Programming</a></h3>
-				  <p>Optimized cloud kitchen-to-service station assignments using geospatial analysis and linear programming to minimize delivery distances and enhance operational efficiency</p>
+					  <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Delivery-Optimization">Optimizing Cloud Kitchen Assignments Using Geospatial Analysis and Linear Programming</a></h3>
+					  <p>Optimized cloud kitchen-to-service station assignments using geospatial analysis and linear programming to minimize delivery distances and enhance operational efficiency</p>
+					  <div class="project-meta">
+						  <span>Geospatial</span>
+						  <span>Linear Programming</span>
+						  <span>Ops Optimization</span>
+					  </div>
+					</div>
+				  </div>
 				</div>
-			  </div>
-			</div>
 			
 		 </div>
 	  </div> 
@@ -887,7 +1434,7 @@
                 </div>
         </section>
 
-    <section class="ftco-section ftco-no-pt" id="process-section">
+    <section class="ftco-section ftco-no-pt section-animated data-grid" id="process-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center ftco-animate">
@@ -898,21 +1445,21 @@
         </div>
         <div class="row">
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step">
+            <div class="process-step reveal-on-scroll lively-card">
               <span class="step-index">01</span>
               <h3>Discover &amp; Align</h3>
               <p>Partner with stakeholders to map goals, frame measurable hypotheses, and prioritize value based on the customer journey.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step">
+            <div class="process-step reveal-on-scroll lively-card">
               <span class="step-index">02</span>
               <h3>Model & Experiment</h3>
               <p>Design data models, Python prototypes, and experiments that validate assumptions, quantify impact, and surface trade-offs fast.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step">
+            <div class="process-step reveal-on-scroll lively-card">
               <span class="step-index">03</span>
               <h3>Activate Insights</h3>
               <p>Launch production-ready dashboards, enablement assets, and automation so teams act confidently on the story the data tells.</p>
@@ -924,7 +1471,7 @@
 
 
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <section class="ftco-section contact-section ftco-no-pb section-animated" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -936,7 +1483,7 @@
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center reveal-on-scroll">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-map-signs"></span>
           		</div>
@@ -945,7 +1492,7 @@
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center reveal-on-scroll">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-phone2"></span>
           		</div>
@@ -954,7 +1501,7 @@
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center reveal-on-scroll">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-paper-plane"></span>
           		</div>
@@ -995,9 +1542,9 @@
 
 
 
-    <section class="ftco-section py-5">
+    <section class="ftco-section py-5 section-animated">
       <div class="container">
-        <div class="cta-panel ftco-animate">
+        <div class="cta-panel ftco-animate reveal-on-scroll">
           <div class="row align-items-center">
             <div class="col-lg-8">
               <h2>Let’s Operationalize Insight Together</h2>
@@ -1044,6 +1591,26 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealItems = document.querySelectorAll('.reveal-on-scroll');
+      const observer = new IntersectionObserver(
+        (entries, activeObserver) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              activeObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+    });
+  </script>
     
   </body>
 </html>
