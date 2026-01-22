@@ -514,10 +514,73 @@
 .project-card {
   opacity: 0;
   transform: translateY(20px) scale(0.98);
+  position: relative;
+  overflow: hidden;
 }
 
 .project-card.is-visible {
-  animation: card-reveal 0.9s ease forwards;
+  animation: card-reveal 0.9s ease forwards, card-float 6s ease-in-out 0.9s infinite;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: conic-gradient(from 180deg, rgba(56, 189, 248, 0.7), rgba(129, 140, 248, 0.6), rgba(34, 211, 238, 0.6), rgba(56, 189, 248, 0.7));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.lively-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lively-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: conic-gradient(from 90deg, rgba(56, 189, 248, 0.35), rgba(129, 140, 248, 0.3), rgba(34, 211, 238, 0.3), rgba(56, 189, 248, 0.35));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: border-spin 8s linear infinite;
+}
+
+.lively-card::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.92);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lively-card:hover::before,
+.lively-card:hover::after {
+  opacity: 1;
+}
+
+.lively-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.lively-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.35);
 }
 
 .reveal-on-scroll {
@@ -662,6 +725,24 @@
   }
 }
 
+@keyframes card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes section-glow {
   0%,
   100% {
@@ -1022,7 +1103,7 @@
 
 			<div class="row mb-5">
 				<div class="col-lg-12 d-flex ftco-animate">
-					<div class="resume-card reveal-on-scroll">
+					<div class="resume-card reveal-on-scroll lively-card">
 						<h3 class="resume-card-title">Professional Summary</h3>
 						<ul class="resume-list">
 							<li>Data Analyst with 5+ years of experience supporting data-driven decisions across healthcare, retail, logistics, supply chain, and IT sectors.</li>
@@ -1046,7 +1127,7 @@
 				<div class="underline"></div>
 			</div>
 			<div class="col-12 d-flex ftco-animate">
-				<div class="resume-card certifications-card reveal-on-scroll">
+				<div class="resume-card certifications-card reveal-on-scroll lively-card">
 					<div class="certification-badges">
 						<span>Microsoft Certified: Power BI Data Analyst Associate</span>
 						<span>Data Analytics Essentials, Cisco</span>
@@ -1068,7 +1149,7 @@
 		
 		<div class="row">
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate reveal-on-scroll">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">Jul 2025 - Present</span>
 						<h2>Business Analyst</h2>
 						<span class="position">Cloud Pharmaceuticals</span>
@@ -1084,7 +1165,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate reveal-on-scroll">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">Jan 2024 - May 2024</span>
 						<h2>Data Analyst</h2>
 						<span class="position">Volvo Group</span>
@@ -1103,7 +1184,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate reveal-on-scroll">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">May 2023 - Dec 2024</span>
 						<h2>Facilities Admin</h2>
 						<span class="position">NC State University</span>
@@ -1118,7 +1199,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate reveal-on-scroll">
+					<div class="resume-wrap ftco-animate reveal-on-scroll lively-card">
 						<span class="date">May 2019 - Dec 2022</span>
 						<h2>Data Analyst</h2>
 						<span class="position">Accenture</span>
@@ -1151,7 +1232,7 @@
 		
 			<div class="row">
     			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate lively-card">
     					<span class="date">Jan 2023 - Dec 2024</span>
     					<h2>Master of Engineering Management (Data Science &amp; Analytics)</h2>
     					<span class="position">North Carolina State University, Raleigh, NC</span>
@@ -1159,7 +1240,7 @@
     			</div>
 
     			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
+	    			<div class="resume-wrap ftco-animate lively-card">
     					<span class="date">Bachelor of Science</span>
     					<h2>Information Technology</h2>
     					<span class="position">Sreenidhi University, Hyderabad, India</span>
@@ -1301,21 +1382,21 @@
         </div>
         <div class="row">
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step reveal-on-scroll">
+            <div class="process-step reveal-on-scroll lively-card">
               <span class="step-index">01</span>
               <h3>Discover &amp; Align</h3>
               <p>Partner with stakeholders to map goals, frame measurable hypotheses, and prioritize value based on the customer journey.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step reveal-on-scroll">
+            <div class="process-step reveal-on-scroll lively-card">
               <span class="step-index">02</span>
               <h3>Model & Experiment</h3>
               <p>Design data models, Python prototypes, and experiments that validate assumptions, quantify impact, and surface trade-offs fast.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step reveal-on-scroll">
+            <div class="process-step reveal-on-scroll lively-card">
               <span class="step-index">03</span>
               <h3>Activate Insights</h3>
               <p>Launch production-ready dashboards, enablement assets, and automation so teams act confidently on the story the data tells.</p>
