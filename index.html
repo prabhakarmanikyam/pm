@@ -289,6 +289,135 @@
   border-color: #0f172a;
 }
 
+.hero-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-ambient span {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  opacity: 0.4;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.7) 0%, rgba(15, 23, 42, 0) 70%);
+  animation: float-orb 16s ease-in-out infinite;
+}
+
+.hero-ambient span:nth-child(2) {
+  width: 280px;
+  height: 280px;
+  left: 60%;
+  top: 10%;
+  opacity: 0.35;
+  animation-duration: 20s;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.75) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.hero-ambient span:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  left: 20%;
+  top: 65%;
+  opacity: 0.3;
+  animation-duration: 18s;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.65) 0%, rgba(15, 23, 42, 0) 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animated::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  animation: button-shimmer 3.5s ease-in-out infinite;
+}
+
+.float-card {
+  animation: float-card 8s ease-in-out infinite;
+}
+
+.float-card.delay-1 {
+  animation-delay: 0.8s;
+}
+
+.float-card.delay-2 {
+  animation-delay: 1.6s;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, var(--sky), var(--violet), var(--aqua));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(40px, -40px, 0);
+  }
+}
+
+@keyframes button-shimmer {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(220%);
+    opacity: 0;
+  }
+}
+
+@keyframes float-card {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @media (max-width: 991.98px) {
   .cta-panel {
     text-align: center;
@@ -350,7 +479,12 @@
               </div>
             </div>
           </nav>
-	  <section id="home-section" class="hero">
+	  <section id="home-section" class="hero hero-animated">
+		  <div class="hero-ambient">
+			  <span style="left: -40px; top: 10%;"></span>
+			  <span></span>
+			  <span></span>
+		  </div>
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
 	      	<div class="overlay"></div>
@@ -359,10 +493,10 @@
 	          	<div class="one-third  order-md-last img" style="background-image:url(images/IMG_0188.JPG); height:80%">
 	          	 <div class="overlay"></div>
 	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          <div class="one-forth d-flex  align-items-center ftco-animate hero-content" data-scrollax=" properties: { translateY: '70%' }">
 		          	<div class="text">
 		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Prabhakar M</span></h1>
+			            <h1 class="mb-4 mt-3">I'm <span class="gradient-text">Prabhakar M</span></h1>
 
 						<!-- Element to contain animated typing -->
 						<span id="typing-animation"></span>
@@ -406,7 +540,7 @@
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <p>
-                                                 <a href="https://github.com/prabhakarmanikyam?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4">Explore Portfolio</a></p>
+                                                 <a href="https://github.com/prabhakarmanikyam?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4 btn-animated">Explore Portfolio</a></p>
 		            </div>
 		          </div>
 	        	</div>
@@ -568,21 +702,21 @@
         </div>
         <div class="row mb-4">
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
+            <div class="highlight-card float-card">
               <div class="icon"><span class="icon-bar-chart"></span></div>
               <h3>Forecasting with Confidence</h3>
               <p>Designed predictive models on 500K+ shipments to sharpen planning accuracy, cut stockouts by 80%, and drive smarter inventory bets.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
+            <div class="highlight-card float-card delay-1">
               <div class="icon"><span class="icon-rocket"></span></div>
               <h3>Operational Clarity</h3>
               <p>Streamlined analytics delivery and stakeholder alignment, accelerating sign-offs by 30% and unlocking faster execution.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card">
+            <div class="highlight-card float-card delay-2">
               <div class="icon"><span class="icon-layers"></span></div>
               <h3>Insight-to-Action Stack</h3>
               <p>Blend Python, SQL, Power BI, Tableau, Azure, and Snowflake to translate complex questions into decisions teams can act on.</p>
