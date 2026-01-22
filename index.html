@@ -289,6 +289,29 @@
   border-color: #0f172a;
 }
 
+.section-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-animated::before {
+  content: "";
+  position: absolute;
+  inset: -40% 0 auto;
+  height: 120%;
+  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 10%, rgba(129, 140, 248, 0.2), transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(34, 211, 238, 0.18), transparent 45%);
+  opacity: 0.6;
+  animation: section-glow 18s ease-in-out infinite;
+  z-index: 0;
+}
+
+.section-animated > .container {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-animated {
   position: relative;
   overflow: hidden;
@@ -372,6 +395,35 @@
   animation: gradient-shift 6s ease infinite;
 }
 
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-item:hover::after {
+  opacity: 1;
+}
+
 @keyframes float-orb {
   0%,
   100% {
@@ -415,6 +467,16 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes section-glow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
   }
 }
 
@@ -549,12 +611,12 @@
                 </div>
     </section>
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <section class="ftco-about img ftco-section ftco-no-pb section-animated" id="about-section">
     	<div class="container">
 			<div class="row">
 				<div class="row d-flex align-items-stretch">
 				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
+					<div class="col-md-6 col-lg-5 d-flex reveal-on-scroll">
 						<div class="img-about img d-flex align-items-stretch">
 							<div class="overlay">
 								<div class="row">
@@ -577,7 +639,7 @@
 						</div>
 					</div>
 					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="col-md-6 col-lg-7 pl-lg-5 pb-5 reveal-on-scroll">
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
 								
@@ -691,7 +753,7 @@
 		</div>
     </section>
 
-    <section class="ftco-section ftco-no-pt bg-light" id="highlights-section">
+    <section class="ftco-section ftco-no-pt bg-light section-animated" id="highlights-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center ftco-animate">
@@ -700,23 +762,23 @@
             <p>Turning data strategy into measurable wins—faster decisions, stronger operations, and clearer executive alignment.</p>
           </div>
         </div>
-        <div class="row mb-4">
+        <div class="row mb-4 reveal-on-scroll">
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card float-card">
+            <div class="highlight-card float-card reveal-on-scroll">
               <div class="icon"><span class="icon-bar-chart"></span></div>
               <h3>Forecasting with Confidence</h3>
               <p>Designed predictive models on 500K+ shipments to sharpen planning accuracy, cut stockouts by 80%, and drive smarter inventory bets.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card float-card delay-1">
+            <div class="highlight-card float-card delay-1 reveal-on-scroll">
               <div class="icon"><span class="icon-rocket"></span></div>
               <h3>Operational Clarity</h3>
               <p>Streamlined analytics delivery and stakeholder alignment, accelerating sign-offs by 30% and unlocking faster execution.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-            <div class="highlight-card float-card delay-2">
+            <div class="highlight-card float-card delay-2 reveal-on-scroll">
               <div class="icon"><span class="icon-layers"></span></div>
               <h3>Insight-to-Action Stack</h3>
               <p>Blend Python, SQL, Power BI, Tableau, Azure, and Snowflake to translate complex questions into decisions teams can act on.</p>
@@ -725,7 +787,7 @@
         </div>
         <div class="row">
           <div class="col-12">
-            <div class="p-5 text-white rounded position-relative toolkit-panel">
+            <div class="p-5 text-white rounded position-relative toolkit-panel reveal-on-scroll">
               <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between">
                 <div class="pe-lg-5 mb-4 mb-lg-0">
                   <h3 class="text-uppercase" style="letter-spacing:2px;">Analytics Focus</h3>
@@ -741,7 +803,7 @@
 
 
 	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+    <section class="ftco-section ftco-no-pb section-animated" id="resume-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
@@ -753,7 +815,7 @@
 
 			<div class="row mb-5">
 				<div class="col-lg-12 d-flex ftco-animate">
-					<div class="resume-card">
+					<div class="resume-card reveal-on-scroll">
 						<h3 class="resume-card-title">Professional Summary</h3>
 						<ul class="resume-list">
 							<li>Data Analyst with 5+ years of experience supporting data-driven decisions across healthcare, retail, logistics, supply chain, and IT sectors.</li>
@@ -777,7 +839,7 @@
 				<div class="underline"></div>
 			</div>
 			<div class="col-12 d-flex ftco-animate">
-				<div class="resume-card certifications-card">
+				<div class="resume-card certifications-card reveal-on-scroll">
 					<div class="certification-badges">
 						<span>Microsoft Certified: Power BI Data Analyst Associate</span>
 						<span>Data Analytics Essentials, Cisco</span>
@@ -799,7 +861,7 @@
 		
 		<div class="row">
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll">
 						<span class="date">Jul 2025 - Present</span>
 						<h2>Business Analyst</h2>
 						<span class="position">Cloud Pharmaceuticals</span>
@@ -815,7 +877,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll">
 						<span class="date">Jan 2024 - May 2024</span>
 						<h2>Data Analyst</h2>
 						<span class="position">Volvo Group</span>
@@ -834,7 +896,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll">
 						<span class="date">May 2023 - Dec 2024</span>
 						<h2>Facilities Admin</h2>
 						<span class="position">NC State University</span>
@@ -849,7 +911,7 @@
 				</div>
 
 				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
+					<div class="resume-wrap ftco-animate reveal-on-scroll">
 						<span class="date">May 2019 - Dec 2022</span>
 						<h2>Data Analyst</h2>
 						<span class="position">Accenture</span>
@@ -904,7 +966,7 @@
 
    
 
-    <section class="ftco-section" id="project-section">
+    <section class="ftco-section section-animated" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -915,7 +977,7 @@
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
+          	<div class="blog-entry justify-content-end reveal-on-scroll">
               <a href="https://github.com/prabhakarmanikyam/amazonemployeeclassification" class="block-20 zoom-effect" style="background-image: url('images/employee-access.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
@@ -926,7 +988,7 @@
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
+          	<div class="blog-entry justify-content-end reveal-on-scroll">
               <a href="https://github.com/prabhakarmanikyam/Data-Analysis/blob/main/Data%20Analysis%20%20Project%20Report-draft.pdf" class="block-20 zoom-effect" style="background-image: url('images/target.avif');">
               </a>
               <div class="text mt-3 float-right d-block">
@@ -937,7 +999,7 @@
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
+          	<div class="blog-entry reveal-on-scroll">
               <a href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction" class="block-20 zoom-effect" style="background-image: url('images/heart-disease.jpg');">
               </a>
               <div class="text mt-3 float-right d-block">
@@ -952,8 +1014,8 @@
 		<br>
 		<!-- added justify-content-center to center align the last two projects -->
 		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end reveal-on-scroll">
 				<a href="https://github.com/prabhakarmanikyam/Delivery-Optimization" class="block-20 zoom-effect" style="background-image: url('images/geo.png');">
 				</a>
 				<div class="text mt-3 float-right d-block">
@@ -1021,7 +1083,7 @@
                 </div>
         </section>
 
-    <section class="ftco-section ftco-no-pt" id="process-section">
+    <section class="ftco-section ftco-no-pt section-animated" id="process-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center ftco-animate">
@@ -1032,21 +1094,21 @@
         </div>
         <div class="row">
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step">
+            <div class="process-step reveal-on-scroll">
               <span class="step-index">01</span>
               <h3>Discover &amp; Align</h3>
               <p>Partner with stakeholders to map goals, frame measurable hypotheses, and prioritize value based on the customer journey.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step">
+            <div class="process-step reveal-on-scroll">
               <span class="step-index">02</span>
               <h3>Model & Experiment</h3>
               <p>Design data models, Python prototypes, and experiments that validate assumptions, quantify impact, and surface trade-offs fast.</p>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate mb-4">
-            <div class="process-step">
+            <div class="process-step reveal-on-scroll">
               <span class="step-index">03</span>
               <h3>Activate Insights</h3>
               <p>Launch production-ready dashboards, enablement assets, and automation so teams act confidently on the story the data tells.</p>
@@ -1058,7 +1120,7 @@
 
 
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <section class="ftco-section contact-section ftco-no-pb section-animated" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -1070,7 +1132,7 @@
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center reveal-on-scroll">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-map-signs"></span>
           		</div>
@@ -1079,7 +1141,7 @@
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center reveal-on-scroll">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-phone2"></span>
           		</div>
@@ -1088,7 +1150,7 @@
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
+          	<div class="align-self-stretch box p-4 text-center reveal-on-scroll">
           		<div class="icon d-flex align-items-center justify-content-center">
           			<span class="icon-paper-plane"></span>
           		</div>
@@ -1129,9 +1191,9 @@
 
 
 
-    <section class="ftco-section py-5">
+    <section class="ftco-section py-5 section-animated">
       <div class="container">
-        <div class="cta-panel ftco-animate">
+        <div class="cta-panel ftco-animate reveal-on-scroll">
           <div class="row align-items-center">
             <div class="col-lg-8">
               <h2>Let’s Operationalize Insight Together</h2>
@@ -1178,6 +1240,26 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealItems = document.querySelectorAll('.reveal-on-scroll');
+      const observer = new IntersectionObserver(
+        (entries, activeObserver) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              activeObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+    });
+  </script>
     
   </body>
 </html>
