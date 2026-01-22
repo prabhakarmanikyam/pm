@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Prabhakar M Portfolio</title>
+    <title>Prabhaker Manikyam | Data &amp; BI Analyst</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Prabhaker Manikyam is a data and BI analyst delivering forecasting, KPI clarity, and executive dashboards across supply chain, healthcare, and operations.">
+    <meta property="og:title" content="Prabhaker Manikyam | Data &amp; BI Analyst">
+    <meta property="og:description" content="Forecasting, KPI clarity, and executive dashboards that drive measurable business decisions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prabhakarmanikyam.github.io/pm/">
+    <meta property="og:image" content="images/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prabhaker Manikyam | Data &amp; BI Analyst">
+    <meta name="twitter:description" content="Forecasting, KPI clarity, and executive dashboards that drive measurable business decisions.">
+    <meta name="twitter:image" content="images/og-cover.jpg">
+    <link rel="icon" href="images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="images/favicon-192.png" sizes="192x192">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -67,47 +79,6 @@
 .skill-mf .progress .progress-bar {
   height: .7rem;
   background: linear-gradient(90deg, var(--sky), var(--violet));
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
 }
 
 
@@ -847,6 +818,8 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+                  <li class="nav-item"><a href="#proof-section" class="nav-link"><span>Proof</span></a></li>
+                  <li class="nav-item"><a href="#metrics-section" class="nav-link"><span>Metrics</span></a></li>
                   <li class="nav-item"><a href="#highlights-section" class="nav-link"><span>Highlights</span></a></li>
                   <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
                   <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
@@ -857,6 +830,7 @@
               </div>
             </div>
           </nav>
+	  <main>
 	  <section id="home-section" class="hero hero-animated data-grid">
 		  <div class="hero-ambient">
 			  <span style="left: -40px; top: 10%;"></span>
@@ -867,79 +841,96 @@
 	       <div class="slider-item ">
 	      	<div class="overlay"></div>
 	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third  order-md-last img" style="background-image:url(images/IMG_0188.JPG); height:80%">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate hero-content" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span class="gradient-text">Prabhakar M</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-                                                const typingTexts = [
-                                                'Data Analyst  ',
-                                                'Analytics Translator  ',
-                                                'Insight Storyteller  '
-                                                ];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-                                    <h2>Data &amp; Business Analyst</h2>
-									<div class="analytics-strip reveal-on-scroll">
-										<span>Forecast Models</span>
-										<span>Pipeline KPIs</span>
-										<span>Executive Dashboards</span>
-									</div>
-									<svg class="data-sparkline reveal-on-scroll" viewBox="0 0 300 80" aria-hidden="true">
-										<path d="M10 60 L60 40 L110 50 L160 20 L210 35 L260 15 L290 30"></path>
-										<circle cx="10" cy="60" r="4"></circle>
-										<circle cx="60" cy="40" r="4"></circle>
-										<circle cx="110" cy="50" r="4"></circle>
-										<circle cx="160" cy="20" r="4"></circle>
-										<circle cx="210" cy="35" r="4"></circle>
-										<circle cx="260" cy="15" r="4"></circle>
-										<circle cx="290" cy="30" r="4"></circle>
-									</svg>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p>
-                                                 <a href="https://github.com/prabhakarmanikyam?tab=repositories" class="btn btn-white btn-outline-white py-3 px-4 btn-animated">Explore Portfolio</a></p>
-		            </div>
-		          </div>
-	        	</div>
+          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+            <div class="one-third  order-md-last img" style="background-image:url(images/IMG_0188.JPG); height:80%">
+             <div class="overlay"></div>
+            </div>
+              <div class="one-forth d-flex  align-items-center ftco-animate hero-content" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Data &amp; BI Analyst</span>
+                  <h1 class="mb-3">Turning complex data into <span class="gradient-text">decisions leaders trust</span>.</h1>
+                  <p class="hero-subhead">5+ years building forecasting models, KPI systems, and executive dashboards across supply chain, healthcare, and operations.</p>
+                  <div class="hero-cta-group">
+                    <a href="assets/Prabhaker-Manikyam-Resume.pdf" class="btn btn-primary py-3 px-4">Download Resume</a>
+                    <a href="#project-section" class="btn btn-white btn-outline-white py-3 px-4">View Projects</a>
+                  </div>
+                  <div class="analytics-strip reveal-on-scroll">
+                    <span>Forecast Models</span>
+                    <span>Pipeline KPIs</span>
+                    <span>Executive Dashboards</span>
+                  </div>
+                  <svg class="data-sparkline reveal-on-scroll" viewBox="0 0 300 80" aria-hidden="true">
+                    <path d="M10 60 L60 40 L110 50 L160 20 L210 35 L260 15 L290 30"></path>
+                    <circle cx="10" cy="60" r="4"></circle>
+                    <circle cx="60" cy="40" r="4"></circle>
+                    <circle cx="110" cy="50" r="4"></circle>
+                    <circle cx="160" cy="20" r="4"></circle>
+                    <circle cx="210" cy="35" r="4"></circle>
+                    <circle cx="260" cy="15" r="4"></circle>
+                    <circle cx="290" cy="30" r="4"></circle>
+                  </svg>
+                </div>
+              </div>
+          </div>
                 </div>
               </div>
                 </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb section-animated" id="proof-section">
+      <div class="container">
+        <div class="proof-strip reveal-on-scroll">
+          <div>
+            <h2 class="proof-title">Proof, at a glance</h2>
+            <p class="proof-subtitle">Skills, domains, and outcomes recruiters can scan in 10 seconds.</p>
+          </div>
+          <div class="proof-grid">
+            <div class="proof-card">
+              <h3>Skills</h3>
+              <p>SQL • Power BI • Python • Azure/AWS</p>
+            </div>
+            <div class="proof-card">
+              <h3>Domains</h3>
+              <p>Supply Chain • Finance • Operations</p>
+            </div>
+            <div class="proof-card">
+              <h3>Highlights</h3>
+              <p>80% fewer stockouts • 500K+ shipments • 30% faster approvals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt section-animated" id="metrics-section">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8 text-center">
+            <h2 class="mb-2">Featured Metrics</h2>
+            <p class="text-muted">Top outcomes that show business impact and delivery cadence.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 d-flex">
+            <div class="metric-card reveal-on-scroll">
+              <h3>80% fewer stockouts</h3>
+              <p>Forecast tuning and Power BI dashboards improved supply planning visibility.</p>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex">
+            <div class="metric-card reveal-on-scroll">
+              <h3>30% faster approvals</h3>
+              <p>Aligned KPI definitions with stakeholders to speed up decision cycles.</p>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex">
+            <div class="metric-card reveal-on-scroll">
+              <h3>15% projected cost reduction</h3>
+              <p>Executive capacity dashboards modeled AI infrastructure trade-offs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="ftco-about img ftco-section ftco-no-pb section-animated" id="about-section">
@@ -977,9 +968,7 @@
 								<h1 class="big">About</h1>
 								<h2 class="mb-4">About Me</h2>
 								
-								<p>I’m Prabhaker Manikyam, a data analyst who turns complex signals into confident decisions. With 5+ years across healthcare, retail, logistics, and IT, I blend advanced SQL, Python, and R with a storyteller’s mindset to make analytics actionable for both technical and business audiences.
-
-									<br>From cloud data platforms to executive dashboards, I design end-to-end insights that elevate strategy, accelerate operations, and inspire teams to move with clarity. My focus is simple: build analytics that earns trust, drives measurable impact, and sparks the next smart move.</p>
+								<p>I’m Prabhaker Manikyam, a data and BI analyst who turns complex signals into decisions leaders can act on. Over 5+ years, I’ve delivered forecasting models, KPI systems, and executive dashboards across healthcare, retail, logistics, and IT. My focus is simple: create analytics that earn trust and move outcomes.</p>
 									<ul class="about-info mt-4 px-md-0 px-2">
 										<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
 										<!--<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, HealthCare, Information Technology</span></li>-->
@@ -1184,7 +1173,7 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row timeline">
 			<h1 class="big-4">Experience</h1>
 			<div class="underline"></div>
 		</div>
@@ -1299,86 +1288,103 @@
 
     <section class="ftco-section section-animated" id="project-section">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8 heading-section text-center">
             <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+            <h2 class="mb-3">Case Study Highlights</h2>
+            <p>Each project is structured around the business question, approach, and measurable impact.</p>
           </div>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end reveal-on-scroll project-card">
-              <a href="https://github.com/prabhakarmanikyam/amazonemployeeclassification" class="block-20 zoom-effect" style="background-image: url('images/employee-access.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/amazonemployeeclassification">Optimizing Employee Access Approval Using Machine Learning</a></h3>
-                <p>Designed a machine learning model to predict access approvals/denials using Random Forest, achieving 95% test accuracy and reducing false positive rates to 12%.</p>
-				<div class="project-meta">
-					<span>Random Forest</span>
-					<span>95% Accuracy</span>
-					<span>Classification</span>
-				</div>
+        <div class="project-filters reveal-on-scroll" role="tablist" aria-label="Project filters">
+          <button class="filter-chip is-active" data-filter="all" type="button">All</button>
+          <button class="filter-chip" data-filter="bi" type="button">BI</button>
+          <button class="filter-chip" data-filter="ml" type="button">ML</button>
+          <button class="filter-chip" data-filter="data-eng" type="button">Data Engineering</button>
+          <button class="filter-chip" data-filter="ops" type="button">Operations</button>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="case-card reveal-on-scroll project-card" data-category="ml">
+              <img src="images/employee-access.jpg" alt="Access approval analytics dashboard" loading="lazy" width="640" height="420">
+              <div class="case-body">
+                <p class="case-kicker">ML • Access Controls</p>
+                <h3>Employee Access Approval (Random Forest)</h3>
+                <p class="case-hook">Reduced false approvals by modeling access risk and decision patterns.</p>
+                <div class="case-details">
+                  <p><strong>Problem:</strong> Manual approvals created inconsistent access decisions.</p>
+                  <p><strong>Approach:</strong> Random Forest classification with feature engineering and validation.</p>
+                  <p><strong>Tools:</strong> Python, scikit-learn, pandas.</p>
+                  <p><strong>Impact:</strong> 95% accuracy, 12% false-positive rate.</p>
+                </div>
+                <div class="case-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/prabhakarmanikyam/amazonemployeeclassification">Case Study</a>
+                  <a class="btn btn-outline-primary btn-sm" href="https://github.com/prabhakarmanikyam/amazonemployeeclassification">GitHub</a>
+                </div>
               </div>
-            </div>
+            </article>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end reveal-on-scroll project-card">
-              <a href="https://github.com/prabhakarmanikyam/Data-Analysis/blob/main/Data%20Analysis%20%20Project%20Report-draft.pdf" class="block-20 zoom-effect" style="background-image: url('images/target.avif');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Data-Analysis/blob/main/Data%20Analysis%20%20Project%20Report-draft.pdf">Target Store Sales Data Analysis</a></h3>
-                <p>Developed an MS Access database with interactive dashboards and visual analytics to track sales records, identify trends across product categories, and analyze total sales for enhanced managerial decision-making. </p>
-				<div class="project-meta">
-					<span>MS Access</span>
-					<span>Sales Trends</span>
-					<span>Dashboards</span>
-				</div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="case-card reveal-on-scroll project-card" data-category="bi data-eng">
+              <img src="images/target.avif" alt="Retail sales dashboard summary" loading="lazy" width="640" height="420">
+              <div class="case-body">
+                <p class="case-kicker">BI • Retail</p>
+                <h3>Target Store Sales Analysis</h3>
+                <p class="case-hook">Turned siloed sales data into category-level insights for managers.</p>
+                <div class="case-details">
+                  <p><strong>Problem:</strong> Sales trends were hard to surface across categories.</p>
+                  <p><strong>Approach:</strong> Built an MS Access database with visual analytics.</p>
+                  <p><strong>Tools:</strong> MS Access, SQL, Excel.</p>
+                  <p><strong>Impact:</strong> Improved visibility into category trends and totals.</p>
+                </div>
+                <div class="case-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/prabhakarmanikyam/Data-Analysis/blob/main/Data%20Analysis%20%20Project%20Report-draft.pdf">Case Study</a>
+                  <a class="btn btn-outline-primary btn-sm" href="https://github.com/prabhakarmanikyam/Data-Analysis">GitHub</a>
+                </div>
               </div>
-            </div>
+            </article>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry reveal-on-scroll project-card">
-              <a href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction" class="block-20 zoom-effect" style="background-image: url('images/heart-disease.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction">Early Detection of Heart Disease</a></h3>
-                <p>Developed and optimized an XGBoost classifier, achieving 88.33% accuracy in heart disease prediction by applying advanced hyperparameter tuning and feature selection techniques to enhance model performance and generalization.</p>
-				<div class="project-meta">
-					<span>XGBoost</span>
-					<span>88.33% Accuracy</span>
-					<span>Feature Selection</span>
-				</div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="case-card reveal-on-scroll project-card" data-category="ml">
+              <img src="images/heart-disease.jpg" alt="Heart disease prediction visualization" loading="lazy" width="640" height="420">
+              <div class="case-body">
+                <p class="case-kicker">ML • Healthcare</p>
+                <h3>Heart Disease Prediction (XGBoost)</h3>
+                <p class="case-hook">Improved risk prediction with tuned ML models for early detection.</p>
+                <div class="case-details">
+                  <p><strong>Problem:</strong> Needed accurate early detection signals from patient data.</p>
+                  <p><strong>Approach:</strong> XGBoost with hyperparameter tuning and feature selection.</p>
+                  <p><strong>Tools:</strong> Python, XGBoost, pandas.</p>
+                  <p><strong>Impact:</strong> 88.33% accuracy.</p>
+                </div>
+                <div class="case-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction">Case Study</a>
+                  <a class="btn btn-outline-primary btn-sm" href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction">GitHub</a>
+                </div>
               </div>
-            </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <article class="case-card reveal-on-scroll project-card" data-category="ops">
+              <img src="images/geo.png" alt="Geospatial delivery optimization map" loading="lazy" width="640" height="420">
+              <div class="case-body">
+                <p class="case-kicker">Operations • Optimization</p>
+                <h3>Cloud Kitchen Delivery Optimization</h3>
+                <p class="case-hook">Minimized delivery distance with geospatial analysis and LP.</p>
+                <div class="case-details">
+                  <p><strong>Problem:</strong> Station assignments increased delivery distance.</p>
+                  <p><strong>Approach:</strong> Geospatial analysis and linear programming.</p>
+                  <p><strong>Tools:</strong> Python, GIS tooling, optimization libraries.</p>
+                  <p><strong>Impact:</strong> Reduced delivery distance ([metric]).</p>
+                </div>
+                <div class="case-actions">
+                  <a class="btn btn-primary btn-sm" href="https://github.com/prabhakarmanikyam/Delivery-Optimization">Case Study</a>
+                  <a class="btn btn-outline-primary btn-sm" href="https://github.com/prabhakarmanikyam/Delivery-Optimization">GitHub</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-	 
-		<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end reveal-on-scroll project-card">
-				<a href="https://github.com/prabhakarmanikyam/Delivery-Optimization" class="block-20 zoom-effect" style="background-image: url('images/geo.png');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-					  <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Delivery-Optimization">Optimizing Cloud Kitchen Assignments Using Geospatial Analysis and Linear Programming</a></h3>
-					  <p>Optimized cloud kitchen-to-service station assignments using geospatial analysis and linear programming to minimize delivery distances and enhance operational efficiency</p>
-					  <div class="project-meta">
-						  <span>Geospatial</span>
-						  <span>Linear Programming</span>
-						  <span>Ops Optimization</span>
-					  </div>
-					</div>
-				  </div>
-				</div>
-			
-		 </div>
-	  </div> 
+      </div>
     </section>
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
@@ -1509,15 +1515,22 @@
 	            <p><a href="mailto:prabhakerm.data@gmail.com">prabhakerm.data@gmail.com</a></p>
 	          </div>
           </div>
-          <!-- <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="#">resumelink</a></p>
-	          </div>
-          </div> -->
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center reveal-on-scroll">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-file"></span>
+              </div>
+              <h3 class="mb-4">Resume</h3>
+              <p><a href="assets/Prabhaker-Manikyam-Resume.pdf">Download PDF</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-actions text-center reveal-on-scroll">
+          <a href="mailto:prabhakerm.data@gmail.com" class="btn btn-primary py-3 px-4">Email Me</a>
+          <a href="https://www.linkedin.com/in/prabhakermanikyam/" class="btn btn-outline-primary py-3 px-4">LinkedIn</a>
+          <a href="https://github.com/prabhakarmanikyam" class="btn btn-outline-primary py-3 px-4">GitHub</a>
+        </div>
 
 		  <div class="container">
 			<br>
@@ -1557,17 +1570,31 @@
         </div>
       </div>
     </section>
+	  </main>
 
- 
     <footer class="ftco-footer ftco-section">
                 <div class="container">
                   <div class="row">
-                        <div class="col-md-12 text-center">
-  
+                        <div class="col-md-6">
+                          <h3 class="footer-title">Quick Links</h3>
+                          <ul class="footer-links">
+                            <li><a href="#home-section">Home</a></li>
+                            <li><a href="#proof-section">Proof</a></li>
+                            <li><a href="#project-section">Projects</a></li>
+                            <li><a href="#resume-section">Resume</a></li>
+                            <li><a href="#contact-section">Contact</a></li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6 text-md-right">
+                          <h3 class="footer-title">Contact</h3>
+                          <p><a href="mailto:prabhakerm.data@gmail.com">prabhakerm.data@gmail.com</a></p>
+                          <p><a href="assets/Prabhaker-Manikyam-Resume.pdf">Download Resume</a></p>
+                        </div>
+                        <div class="col-md-12 text-center mt-4">
 			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
+                        </div>
 		  </div>
 		</div>
 	  </footer>
@@ -1609,6 +1636,26 @@
       );
 
       revealItems.forEach((item) => observer.observe(item));
+
+      const filterButtons = document.querySelectorAll('.filter-chip');
+      const projectCards = document.querySelectorAll('.case-card');
+
+      filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          filterButtons.forEach((btn) => btn.classList.remove('is-active'));
+          button.classList.add('is-active');
+          const filter = button.dataset.filter;
+
+          projectCards.forEach((card) => {
+            const categories = card.dataset.category.split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
+              card.classList.remove('is-hidden');
+            } else {
+              card.classList.add('is-hidden');
+            }
+          });
+        });
+      });
     });
   </script>
     
