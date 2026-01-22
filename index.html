@@ -317,6 +317,18 @@
   overflow: hidden;
 }
 
+.data-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 80px 80px;
+  opacity: 0.35;
+  pointer-events: none;
+  animation: grid-shift 20s linear infinite;
+}
+
 .hero-ambient {
   position: absolute;
   inset: 0;
@@ -395,6 +407,69 @@
   animation: gradient-shift 6s ease infinite;
 }
 
+.analytics-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.analytics-strip span {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #ffffff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: chip-pulse 3s ease-in-out infinite;
+}
+
+.analytics-strip span:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.analytics-strip span:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.data-sparkline {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 360px;
+}
+
+.data-sparkline path {
+  stroke: var(--aqua);
+  stroke-width: 3;
+  fill: none;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: draw-line 4s ease-in-out infinite;
+}
+
+.data-sparkline circle {
+  fill: var(--sky);
+  animation: node-pulse 2.5s ease-in-out infinite;
+}
+
+.data-sparkline circle:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+.data-sparkline circle:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+.data-sparkline circle:nth-of-type(4) {
+  animation-delay: 1.2s;
+}
+
+.data-sparkline circle:nth-of-type(5) {
+  animation-delay: 1.6s;
+}
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -470,6 +545,51 @@
   }
 }
 
+@keyframes grid-shift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 160px 160px, 160px 160px;
+  }
+}
+
+@keyframes chip-pulse {
+  0%,
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+  50% {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.3);
+  }
+}
+
+@keyframes draw-line {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
 @keyframes section-glow {
   0%,
   100% {
@@ -541,7 +661,7 @@
               </div>
             </div>
           </nav>
-	  <section id="home-section" class="hero hero-animated">
+	  <section id="home-section" class="hero hero-animated data-grid">
 		  <div class="hero-ambient">
 			  <span style="left: -40px; top: 10%;"></span>
 			  <span></span>
@@ -599,6 +719,21 @@
 						<br>
 						<br>
                                     <h2>Data &amp; Business Analyst</h2>
+									<div class="analytics-strip reveal-on-scroll">
+										<span>Forecast Models</span>
+										<span>Pipeline KPIs</span>
+										<span>Executive Dashboards</span>
+									</div>
+									<svg class="data-sparkline reveal-on-scroll" viewBox="0 0 300 80" aria-hidden="true">
+										<path d="M10 60 L60 40 L110 50 L160 20 L210 35 L260 15 L290 30"></path>
+										<circle cx="10" cy="60" r="4"></circle>
+										<circle cx="60" cy="40" r="4"></circle>
+										<circle cx="110" cy="50" r="4"></circle>
+										<circle cx="160" cy="20" r="4"></circle>
+										<circle cx="210" cy="35" r="4"></circle>
+										<circle cx="260" cy="15" r="4"></circle>
+										<circle cx="290" cy="30" r="4"></circle>
+									</svg>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
 			            <p>
@@ -1083,7 +1218,7 @@
                 </div>
         </section>
 
-    <section class="ftco-section ftco-no-pt section-animated" id="process-section">
+    <section class="ftco-section ftco-no-pt section-animated data-grid" id="process-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-8 text-center ftco-animate">
