@@ -581,6 +581,23 @@
 .lively-card:hover {
   transform: translateY(-8px) scale(1.01);
   box-shadow: 0 24px 50px rgba(15, 23, 42, 0.35);
+  color: #ffffff;
+}
+
+.lively-card:hover h1,
+.lively-card:hover h2,
+.lively-card:hover h3,
+.lively-card:hover h4,
+.lively-card:hover p,
+.lively-card:hover li,
+.lively-card:hover span {
+  color: #ffffff;
+}
+
+.lively-card:hover .resume-list li,
+.lively-card:hover .certification-badges span {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .reveal-on-scroll {
@@ -610,6 +627,24 @@
 
 .skill-item:hover::after {
   opacity: 1;
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+}
+
+.project-meta span {
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  color: var(--deep-navy);
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
 }
 
 @keyframes float-orb {
@@ -1272,6 +1307,11 @@
 
                 <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/amazonemployeeclassification">Optimizing Employee Access Approval Using Machine Learning</a></h3>
                 <p>Designed a machine learning model to predict access approvals/denials using Random Forest, achieving 95% test accuracy and reducing false positive rates to 12%.</p>
+				<div class="project-meta">
+					<span>Random Forest</span>
+					<span>95% Accuracy</span>
+					<span>Classification</span>
+				</div>
               </div>
             </div>
           </div>
@@ -1283,6 +1323,11 @@
 
                 <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Data-Analysis/blob/main/Data%20Analysis%20%20Project%20Report-draft.pdf">Target Store Sales Data Analysis</a></h3>
                 <p>Developed an MS Access database with interactive dashboards and visual analytics to track sales records, identify trends across product categories, and analyze total sales for enhanced managerial decision-making. </p>
+				<div class="project-meta">
+					<span>MS Access</span>
+					<span>Sales Trends</span>
+					<span>Dashboards</span>
+				</div>
               </div>
             </div>
           </div>
@@ -1294,6 +1339,11 @@
 
                 <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/ml-heartdisease-prediction">Early Detection of Heart Disease</a></h3>
                 <p>Developed and optimized an XGBoost classifier, achieving 88.33% accuracy in heart disease prediction by applying advanced hyperparameter tuning and feature selection techniques to enhance model performance and generalization.</p>
+				<div class="project-meta">
+					<span>XGBoost</span>
+					<span>88.33% Accuracy</span>
+					<span>Feature Selection</span>
+				</div>
               </div>
             </div>
           </div>
@@ -1308,11 +1358,16 @@
 				</a>
 				<div class="text mt-3 float-right d-block">
   
-				  <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Delivery-Optimization">Optimizing Cloud Kitchen Assignments Using Geospatial Analysis and Linear Programming</a></h3>
-				  <p>Optimized cloud kitchen-to-service station assignments using geospatial analysis and linear programming to minimize delivery distances and enhance operational efficiency</p>
+					  <h3 class="heading"><a href="https://github.com/prabhakarmanikyam/Delivery-Optimization">Optimizing Cloud Kitchen Assignments Using Geospatial Analysis and Linear Programming</a></h3>
+					  <p>Optimized cloud kitchen-to-service station assignments using geospatial analysis and linear programming to minimize delivery distances and enhance operational efficiency</p>
+					  <div class="project-meta">
+						  <span>Geospatial</span>
+						  <span>Linear Programming</span>
+						  <span>Ops Optimization</span>
+					  </div>
+					</div>
+				  </div>
 				</div>
-			  </div>
-			</div>
 			
 		 </div>
 	  </div> 
