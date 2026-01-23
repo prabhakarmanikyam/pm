@@ -9854,6 +9854,14 @@ body {
   max-width: 520px;
 }
 
+.hero-animated .owl-carousel.home-slider .slider-item .slider-text .one-third {
+  width: 50%;
+}
+
+.hero-animated .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
+  max-width: 46%;
+}
+
 .hero-cta-group,
 .hero-content .text p {
   position: relative;
