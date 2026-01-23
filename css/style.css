@@ -9812,7 +9812,7 @@ textarea.form-control {
 
 .hero-name {
   display: block;
-  font-size: 2.6rem;
+  font-size: 2.35rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: #ffffff;
@@ -9821,6 +9821,12 @@ textarea.form-control {
 .hero-headline {
   display: block;
   line-height: 1.15;
+  font-size: 2.1rem;
+}
+
+.hero-content .text h1 {
+  line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
 .hero-cta-group {
@@ -9871,6 +9877,10 @@ textarea.form-control {
   letter-spacing: 0.12em;
   color: #0f172a;
   margin-bottom: 0.75rem;
+}
+
+.proof-card p {
+  color: rgba(15, 23, 42, 0.8);
 }
 
 .metric-card {
@@ -10028,7 +10038,7 @@ textarea.form-control {
   }
 
   .hero-name {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 
   .case-card img {
