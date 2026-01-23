@@ -9810,6 +9810,19 @@ textarea.form-control {
   max-width: 520px;
 }
 
+.hero-name {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.hero-headline {
+  display: block;
+  line-height: 1.15;
+}
+
 .hero-cta-group {
   display: flex;
   flex-wrap: wrap;
@@ -9823,6 +9836,10 @@ textarea.form-control {
   padding: 2.5rem;
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
   border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.proof-strip p {
+  color: rgba(30, 41, 59, 0.78);
 }
 
 .proof-title {
@@ -10008,6 +10025,10 @@ textarea.form-control {
   .hero-cta-group {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .hero-name {
+    font-size: 2.1rem;
   }
 
   .case-card img {
