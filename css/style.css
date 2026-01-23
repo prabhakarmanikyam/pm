@@ -9846,6 +9846,20 @@ body {
   margin-bottom: 1rem;
 }
 
+.hero-content .text {
+  max-width: 560px;
+}
+
+.hero-content .text p {
+  max-width: 520px;
+}
+
+.hero-cta-group,
+.hero-content .text p {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-cta-group {
   display: flex;
   flex-wrap: wrap;
@@ -10021,6 +10035,35 @@ body {
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+}
+
+.contact-actions .btn {
+  min-width: 180px;
+  text-align: center;
+}
+
+.contact-actions .btn-outline-primary {
+  background: transparent;
+  color: #0f172a;
+  border-color: #0f172a;
+}
+
+.contact-actions .btn-outline-primary:hover,
+.contact-actions .btn-outline-primary:focus {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.contact-actions .btn-primary {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+}
+
+.contact-actions .btn-primary:hover,
+.contact-actions .btn-primary:focus {
+  background: #111827;
+  border-color: #111827;
 }
 
 .footer-title {
