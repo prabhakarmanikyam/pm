@@ -9803,11 +9803,17 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* Premium portfolio enhancements */
 .hero-subhead {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
   max-width: 520px;
+  text-shadow: 0 8px 18px rgba(15, 23, 42, 0.45);
 }
 
 .hero-name {
