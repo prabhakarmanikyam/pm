@@ -8443,10 +8443,17 @@ h1, h2, h3, h4, h5,
         outline: none !important; }
       .owl-carousel .owl-dots .owl-dot.active {
         background: #b3b3b3; }
-  .owl-carousel.home-slider {
-    position: relative;
-    height: 750px;
-    z-index: 0; }
+.owl-carousel.home-slider {
+  position: relative;
+  height: 750px;
+  z-index: 0;
+  cursor: default; }
+  .owl-carousel.home-slider .owl-stage-outer {
+    overflow: hidden; }
+  .owl-carousel.home-slider .owl-stage {
+    touch-action: pan-y; }
+  .owl-carousel.home-slider .owl-item {
+    user-select: none; }
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
       background-repeat: no-repeat;
@@ -8457,14 +8464,14 @@ h1, h2, h3, h4, h5,
       @media (max-width: 1199.98px) {
         .owl-carousel.home-slider .slider-item {
           background-position: center center !important; } }
-      .owl-carousel.home-slider .slider-item .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #000000;
-        opacity: 0; }
+.owl-carousel.home-slider .slider-item .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  opacity: 0; }
       .owl-carousel.home-slider .slider-item .slider-text {
         height: 750px;
         z-index: 0; }
@@ -8561,9 +8568,9 @@ h1, h2, h3, h4, h5,
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text h2 {
               color: #fff; } }
-        .owl-carousel.home-slider .slider-item .slider-text p {
-          color: rgba(0, 0, 0, 0.8);
-          font-weight: 400; }
+.owl-carousel.home-slider .slider-item .slider-text p {
+  color: #ffffff;
+  font-weight: 400; }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text p {
               color: rgba(255, 255, 255, 0.7);
@@ -9814,6 +9821,10 @@ body {
   color: #ffffff;
   max-width: 520px;
   text-shadow: 0 8px 18px rgba(15, 23, 42, 0.45);
+}
+
+.hero-content .text p {
+  color: #ffffff;
 }
 
 .hero-name {
